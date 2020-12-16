@@ -12,6 +12,7 @@ export function PokemonCard({url, toggleError}){
             try{
                 const result = await axios.get(url);
                 setData(result.data);
+                toggleError(false);
             } catch (e){
                 toggleError(true);
             }
@@ -20,7 +21,7 @@ export function PokemonCard({url, toggleError}){
 
         fetchData()
 
-    },[url])
+    },[url, toggleError])
 
     if(data){
         const {name, sprites, moves, weight, abilities } = data;
@@ -34,7 +35,6 @@ export function PokemonCard({url, toggleError}){
                 <div className='prop-name'>Abilities</div>
                 <ul className='abilities-list'>
                     {abilities.map((ability) =>{
-                        //console.log(ability.ability)
                         return <li className='ability' key = {ability.ability.name}>{ability.ability.name}</li>
                     })}
                 </ul>

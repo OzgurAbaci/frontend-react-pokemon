@@ -57,43 +57,29 @@ function App() {
 
     return (
         <div className='main-app'>
-            {/*list the pokemon in a simple list*/}
-
-            {/*<ul>*/}
-            {/*    {data && data.results.map((result) => <li key={result.name}>{result.name}</li>)}*/}
-            {/*</ul>*/}
-
-            {/*Show the offset*/}
-            {/*<div>*/}
-            {/*    {offset}*/}
-            {/*</div>*/}
 
             <img alt='' src={logo} id='logo'/>
             <div className="buttoncontainer">
                 <button type='button' disabled={!hasPrevious} onClick={
                     () => {
-                        //console.log(nextDataURI);
-                        // if (offset !== 0) {
-                            setOffset(offset - 20)
-                        // }
+                        setOffset(offset - 20)
                     }
-                }>Previous
+                }>
+                    Previous
                 </button>
                 <button type='button' disabled={!hasNext} onClick={
                     () => {
-                        //console.log(nextDataURI);
-                        // if (data && offset + 20 <= data.count) {
-                            setOffset(offset + 20)
-                        // }
+                        setOffset(offset + 20)
                     }
-                }>Next
+                }>
+                    Next
                 </button>
             </div>
 
 
             <div className='pokemon-container'>
                 {data && data.results.map((result) => {
-                    return <PokemonCard url={result.url} key={result.url}/>
+                    return <PokemonCard url={result.url} key={result.url} toggleError={toggleError}/>
                 })}
                 <StatusInfo />
             </div>

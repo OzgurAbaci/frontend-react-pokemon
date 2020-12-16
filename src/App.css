@@ -35,12 +35,17 @@ button {
     background-color: hsl(194, 21%, 56%);
     color: hsl(1, 0%, 0%);
     border-color: hsl(1, 100%, 32%);
+    border-radius: 20px;
     font-size: larger;
     font-weight: bold;
 }
 
 button:disabled {
     background-color: hsl(194, 10%, 30%);
+}
+
+button:focus{
+    outline: none;
 }
 
 .buttoncontainer{
