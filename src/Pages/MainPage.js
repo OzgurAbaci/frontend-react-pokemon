@@ -20,7 +20,6 @@ function MainPage() {
         offset = 0;
     }
 
-    // const [offset, setOffset] = useState(browserOffset);
     const [data, setData] = useState(null);
     const [error, toggleError] = useState(false);
     const [hasNext, toggleHasNext] = useState(true);
@@ -85,10 +84,8 @@ function MainPage() {
                         }
                         if (newOffset === 0) {
                             history.push('/');
-                            // setOffset(newOffset);
                         } else {
                             history.push(`/${newOffset}`)
-                            // setOffset(newOffset);
                         }
 
                     }
@@ -97,12 +94,8 @@ function MainPage() {
                 </button>
                 <button type='button' disabled={!hasNext} onClick={
                     () => {
-                        //the next line contains a useless substraction to prevent 10 + 20 = 1020
-                        //because javascript can't distinguish between strings and integers
                         let newOffset = offset + 20;
                         history.push(`/${newOffset}`)
-                        // changeURL(newOffset)
-                        // setOffset(newOffset);
                     }
                 }>
                     Next
