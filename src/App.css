@@ -1,0 +1,32 @@
+body {
+    background-color: hsl(47, 100%, 52%);
+}
+
+@font-face {
+    font-family: "Chalkduster";
+    src: url("./assets/fonts/Chalkduster.eot");
+    src: url("./assets/fonts/Chalkduster.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/Chalkduster.woff") format("woff"),
+    url("./assets/fonts/Chalkduster.ttf") format("truetype"),
+    url("assets/fonts/Chalkduster.svg#Chalkduster") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Chalkduster', sans-serif;
+}
+
+#logo{
+    width: 70%;
+}
+
+@media screen and (min-width: 800px){
+    #logo{
+        width: 30%;
+    }
+
+}
