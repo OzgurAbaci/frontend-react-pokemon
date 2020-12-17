@@ -1,0 +1,31 @@
+.pokemon-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    width: 130px;
+    margin: 40px;
+    background-color: hsl(194, 21%, 56%);
+    color: hsl(1, 0%, 0%);
+    border-color: hsl(1, 100%, 32%);
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+button:disabled {
+    background-color: hsl(194, 10%, 30%);
+}
+
+button:focus{
+    outline: none;
+}
+
+.buttoncontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

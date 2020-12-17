@@ -3,25 +3,28 @@ import axios from 'axios';
 import defaultimage from '../../assets/image-not-avialable.png'
 import './PokemonCard.css'
 
-export function PokemonCard({url, toggleError}){
+export function PokemonCard({url}){
 
     const [data, setData] = useState(null);
 
     useEffect(()=>{
+        const cancelTokenSoure = axios.CancelToken.source();
         async function fetchData(){
             try{
-                const result = await axios.get(url);
+                const result = await axios.get(url, {cancelToken: cancelTokenSoure.token});
                 setData(result.data);
-                toggleError(false);
             } catch (e){
-                toggleError(true);
             }
 
         }
 
         fetchData()
 
-    },[url, toggleError])
+        return () => {
+            cancelTokenSoure.cancel();
+        };
+
+    },[url])
 
     if(data){
         const {name, sprites, moves, weight, abilities } = data;
@@ -42,7 +45,13 @@ export function PokemonCard({url, toggleError}){
 
         )
     } else{
-        return <article />
+        return (
+            <article className='pokemon-card'>
+                <h3>Missing data</h3>
+                <div>Sorry, something went wrong!</div>
+                <div />
+            </article>
+        )
     }
 
 }
