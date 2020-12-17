@@ -8,10 +8,10 @@ export function PokemonCard({url}){
     const [data, setData] = useState(null);
 
     useEffect(()=>{
-        const cancelTokenSoure = axios.CancelToken.source();
+        const cancelTokenSource = axios.CancelToken.source();
         async function fetchData(){
             try{
-                const result = await axios.get(url, {cancelToken: cancelTokenSoure.token});
+                const result = await axios.get(url, {cancelToken: cancelTokenSource.token});
                 setData(result.data);
             } catch (e){
             }
@@ -21,7 +21,7 @@ export function PokemonCard({url}){
         fetchData()
 
         return () => {
-            cancelTokenSoure.cancel();
+            cancelTokenSource.cancel();
         };
 
     },[url])
