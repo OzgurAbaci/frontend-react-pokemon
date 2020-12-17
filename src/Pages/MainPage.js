@@ -14,7 +14,7 @@ function MainPage() {
     offset = parseInt(offset);
     if (offset <= 0) {
         offset = 0;
-        history.push('/')
+        history.push('/frontend-react-pokemon/')
     }
     if (!offset) {
         offset = 0;
@@ -83,9 +83,9 @@ function MainPage() {
                             newOffset = 0;
                         }
                         if (newOffset === 0) {
-                            history.push('/');
+                            history.push('/frontend-react-pokemon/');
                         } else {
-                            history.push(`/${newOffset}`)
+                            history.push(`/frontend-react-pokemon/${newOffset}`)
                         }
 
                     }
@@ -95,22 +95,19 @@ function MainPage() {
                 <button type='button' disabled={!hasNext} onClick={
                     () => {
                         let newOffset = offset + 20;
-                        history.push(`/${newOffset}`)
+                        history.push(`/frontend-react-pokemon/${newOffset}`)
                     }
                 }>
                     Next
                 </button>
             </div>
-            <Switch>
-                <Route path='/'>
+
                     <div className='pokemon-container'>
                         {data && data.results.map((result) => {
                             return <PokemonCard url={result.url} key={result.url}/>
                         })}
                         <StatusInfo/>
                     </div>
-                </Route>
-            </Switch>
         </>
     );
 }

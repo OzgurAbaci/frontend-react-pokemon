@@ -10,10 +10,10 @@ function App() {
             <div className='main-app'>
                 <img alt='' src={logo} id='logo'/>
                 <Switch>
-                    <Route exact path='/'>
+                    <Route exact path='/frontend-react-pokemon/'>
                         <MainPage/>
                     </Route>
-                    <Route path='/:offset'>
+                    <Route path='/frontend-react-pokemon/:offset'>
                         <MainPage/>
                     </Route>
                 </Switch>
