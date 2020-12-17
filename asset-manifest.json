@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/frontend-react-pokemon/static/css/main.64b28ad3.chunk.css",
+    "main.js": "/frontend-react-pokemon/static/js/main.a9bc934b.chunk.js",
+    "main.js.map": "/frontend-react-pokemon/static/js/main.a9bc934b.chunk.js.map",
+    "runtime-main.js": "/frontend-react-pokemon/static/js/runtime-main.5d9bd6cd.js",
+    "runtime-main.js.map": "/frontend-react-pokemon/static/js/runtime-main.5d9bd6cd.js.map",
+    "static/js/2.d1fda034.chunk.js": "/frontend-react-pokemon/static/js/2.d1fda034.chunk.js",
+    "static/js/2.d1fda034.chunk.js.map": "/frontend-react-pokemon/static/js/2.d1fda034.chunk.js.map",
+    "static/js/3.6b07bce0.chunk.js": "/frontend-react-pokemon/static/js/3.6b07bce0.chunk.js",
+    "static/js/3.6b07bce0.chunk.js.map": "/frontend-react-pokemon/static/js/3.6b07bce0.chunk.js.map",
+    "index.html": "/frontend-react-pokemon/index.html",
+    "static/css/main.64b28ad3.chunk.css.map": "/frontend-react-pokemon/static/css/main.64b28ad3.chunk.css.map",
+    "static/js/2.d1fda034.chunk.js.LICENSE.txt": "/frontend-react-pokemon/static/js/2.d1fda034.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/frontend-react-pokemon/static/media/Chalkduster.b292d679.ttf",
+    "static/media/image-not-avialable.e6f439b9.png": "/frontend-react-pokemon/static/media/image-not-avialable.e6f439b9.png",
+    "static/media/pokemon.03d2cb1c.png": "/frontend-react-pokemon/static/media/pokemon.03d2cb1c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5d9bd6cd.js",
+    "static/js/2.d1fda034.chunk.js",
+    "static/css/main.64b28ad3.chunk.css",
+    "static/js/main.a9bc934b.chunk.js"
+  ]
+}
